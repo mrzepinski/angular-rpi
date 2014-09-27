@@ -30,7 +30,7 @@ You can change default styles for the progress bar by editing `angular-rpi.scss`
 or override it in your own styles.
 
 To build just type:
-`npm install` & after `gulp`
+`npm install` & `bower install` & `gulp`
 
 It will create CSS from SCSS file, and minify JS & CSS files.
 
