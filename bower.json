@@ -1,20 +1,29 @@
 {
-    "author": "Maciej Rzepinski",
-    "name": "angular-rpi",
-    "description": "AngularJS Reading Position Indicator",
-    "version": "0.0.1",
-    "homepage": "https://github.com/mrzepinski/angular-rpi",
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/mrzepinski/angular-rpi"
-    },
-    "devDependencies": {
-        "angular": "~1.3.*"
-    },
-    "licenses": [
-        {
-            "type": "MIT",
-            "url": "http://www.opensource.org/licenses/MIT"
-        }
-    ]
+  "name": "angular-rpi",
+  "version": "0.0.1",
+  "author": "Maciej Rzepinski",
+  "description": "AngularJS Reading Position Indicator",
+  "homepage": "https://github.com/mrzepinski/angular-rpi",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mrzepinski/angular-rpi.git"
+  },
+  "main": [
+    "./dist/css/angular-rpi.css",
+    "./dist/css/angular-rpi.min.css",
+    "./dist/js/angular-rpi.js",
+    "./dist/js/angular-rpi.min.js"
+  ],
+  "ignore": [
+    ".jshintrc"
+  ],
+  "devDependencies": {
+    "angular": "~1.3.*"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/MIT"
+    }
+  ]
 }
