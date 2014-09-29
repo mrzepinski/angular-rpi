@@ -5,7 +5,7 @@ angular.module('angular-rpi', []).directive('rpi', [
     function ($window, $document) {
         return {
             restrict: 'E',
-            link: function ($scope, $element, $attrs) {
+            link: function ($scope, $element) {
                 var w = angular.element($window),
                     e = angular.element($element),
                     body = $document.find('body').eq(0),

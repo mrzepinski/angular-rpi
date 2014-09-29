@@ -1,5 +1,5 @@
 // AngularJS-RPI - Maciej Rzepinski
-// https://github.com/mrzepinski/angular-rpi - MIT License
+// git://github.com/mrzepinski/angular-rpi.git - MIT License
 'use strict';
 
 angular.module('angular-rpi', []).directive('rpi', [
@@ -7,7 +7,7 @@ angular.module('angular-rpi', []).directive('rpi', [
     function ($window, $document) {
         return {
             restrict: 'E',
-            link: function ($scope, $element, $attrs) {
+            link: function ($scope, $element) {
                 var w = angular.element($window),
                     e = angular.element($element),
                     body = $document.find('body').eq(0),
