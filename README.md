@@ -7,7 +7,8 @@ Based on http://css-tricks.com/reading-position-indicator
 
 ### Usage:
 
-Simply add:
+Load a module `['angular-rpi']`
+and simply add:
 
 ````
 <!-- CSS -->
