@@ -1,128 +1,131 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
+<head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="description" content="Angular-RPI : AngularJS Reading Position Indicator">
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/mrzepinski/angular-rpi/master/dist/css/angular-rpi.css" />
+    <link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/mrzepinski/angular-rpi/master/dist/css/angular-rpi.css"/>
 
     <title>Angular-RPI</title>
 
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.0-beta.13/angular.min.js"></script>
-    <script type="text/javascript" src="https://raw.githubusercontent.com/mrzepinski/angular-rpi/master/dist/js/angular-rpi.js"></script>
-  </head>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+    <script src="https://raw.githubusercontent.com/mrzepinski/angular-rpi/master/dist/js/angular-rpi.min.js"></script>
+</head>
 
-  <body>
-    <rpi></rpi>
+<body>
+<rpi></rpi>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/mrzepinski/angular-rpi">View on GitHub</a>
+<!-- HEADER -->
+<div id="header_wrap" class="outer">
+    <header class="inner">
+        <a id="forkme_banner" href="https://github.com/mrzepinski/angular-rpi">View on GitHub</a>
 
-          <h1 id="project_title">Angular-RPI</h1>
-          <h2 id="project_tagline">AngularJS Reading Position Indicator</h2>
+        <h1 id="project_title">Angular-RPI</h1>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/mrzepinski/angular-rpi/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/mrzepinski/angular-rpi/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
+        <h2 id="project_tagline">AngularJS Reading Position Indicator</h2>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
+        <section id="downloads">
+            <a class="zip_download_link" href="https://github.com/mrzepinski/angular-rpi/zipball/master">Download this project as a .zip file</a>
+            <a class="tar_download_link" href="https://github.com/mrzepinski/angular-rpi/tarball/master">Download this project as a tar.gz file</a>
+        </section>
+    </header>
+</div>
+
+<!-- MAIN CONTENT -->
+<div id="main_content_wrap" class="outer">
+    <section id="main_content" class="inner">
         <h1>
-<a name="angular-rpi" class="anchor" href="#angular-rpi"><span class="octicon octicon-link"></span></a>angular-rpi</h1>
+            <a name="angular-rpi" class="anchor" href="#angular-rpi"><span class="octicon octicon-link"></span></a>angular-rpi</h1>
 
-<p>AngularJS Reading Position Indicator</p>
+        <p>AngularJS Reading Position Indicator</p>
 
-<p>Based on <a href="http://css-tricks.com/reading-position-indicator">http://css-tricks.com/reading-position-indicator</a></p>
+        <p>Based on <a href="http://css-tricks.com/reading-position-indicator">http://css-tricks.com/reading-position-indicator</a></p>
 
-<h3>
-<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage:</h3>
+        <h3>
+            <a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage:</h3>
 
-<p>Load a module <code>['angular-rpi']</code> and simply add:</p>
+        <p>Load a module <code>['angular-rpi']</code> and simply add:</p>
 
 <pre><code>&lt;!-- CSS --&gt;
-&lt;link rel="stylesheet" href="dist/css/angular-rpi.min.css" /&gt;
+    &lt;link rel="stylesheet" href="dist/css/angular-rpi.min.css" /&gt;
 
-&lt;!-- JS --&gt;
-&lt;script type="text/javascript" src="dist/js/angular-rpi.min.js"&gt;&lt;/script&gt;
+    &lt;!-- JS --&gt;
+    &lt;script type="text/javascript" src="dist/js/angular-rpi.min.js"&gt;&lt;/script&gt;
 </code></pre>
 
-<p>to your HTML, and then use it as a directive:</p>
+        <p>to your HTML, and then use it as a directive:</p>
 
 <pre><code>&lt;rpi&gt;&lt;/rpi&gt;
 </code></pre>
 
-<h3>
-<a name="modify-and-build" class="anchor" href="#modify-and-build"><span class="octicon octicon-link"></span></a>Modify and build</h3>
+        <h3>
+            <a name="modify-and-build" class="anchor" href="#modify-and-build"><span class="octicon octicon-link"></span></a>Modify and build</h3>
 
-<p>You can change default styles for the progress bar by editing <code>angular-rpi.scss</code>,
-or override it in your own styles.</p>
+        <p>You can change default styles for the progress bar by editing <code>angular-rpi.scss</code>,
+            or override it in your own styles.</p>
 
-<p>To build just type:
-<code>npm install</code> &amp; after <code>gulp</code></p>
+        <p>To build just type:
+            <code>npm install</code> &amp; after <code>gulp</code></p>
 
-<p>It will create CSS from SCSS file, and minify JS &amp; CSS files.</p>
+        <p>It will create CSS from SCSS file, and minify JS &amp; CSS files.</p>
 
-<h3>
-<a name="contribution" class="anchor" href="#contribution"><span class="octicon octicon-link"></span></a>Contribution</h3>
+        <h3>
+            <a name="contribution" class="anchor" href="#contribution"><span class="octicon octicon-link"></span></a>Contribution</h3>
 
-<p>Feel free to commit your code here :)</p>
+        <p>Feel free to commit your code here :)</p>
 
-<h3>
-<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h3>
+        <h3>
+            <a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h3>
 
-<p>The MIT License (MIT)</p>
+        <p>The MIT License (MIT)</p>
 
-<p>Copyright (c) 2014 Maciej Rzepinski</p>
+        <p>Copyright (c) 2014 Maciej Rzepinski</p>
 
-<p>Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:</p>
+        <p>Permission is hereby granted, free of charge, to any person obtaining a copy
+            of this software and associated documentation files (the "Software"), to deal
+            in the Software without restriction, including without limitation the rights
+            to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+            copies of the Software, and to permit persons to whom the Software is
+            furnished to do so, subject to the following conditions:</p>
 
-<p>The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.</p>
+        <p>The above copyright notice and this permission notice shall be included in all
+            copies or substantial portions of the Software.</p>
 
-<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.</p>
-      </section>
-    </div>
+        <p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+            IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+            FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+            AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+            LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+            OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+            SOFTWARE.</p>
+    </section>
+</div>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
+<!-- FOOTER  -->
+<div id="footer_wrap" class="outer">
+    <footer class="inner">
         <p class="copyright">Angular-RPI maintained by <a href="https://github.com/mrzepinski">mrzepinski</a></p>
+
         <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
+    </footer>
+</div>
 
-              <script type="text/javascript">
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-          </script>
-          <script type="text/javascript">
-            try {
-              var pageTracker = _gat._getTracker("UA-40223443-5");
-            pageTracker._trackPageview();
-            } catch(err) {}
-          </script>
+<script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    try {
+        var pageTracker = _gat._getTracker("UA-40223443-5");
+        pageTracker._trackPageview();
+    } catch (err) {
+    }
+</script>
 
 
-  </body>
+</body>
 </html>
