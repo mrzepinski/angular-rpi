@@ -1,5 +1,9 @@
-// AngularJS-RPI - Maciej Rzepinski
-// git://github.com/mrzepinski/angular-rpi.git - MIT License
+/* 
+   angular-rpi v0.1.2
+   git://github.com/mrzepinski/angular-rpi.git
+   MIT License - Maciej Rzepinski
+ */
+
 'use strict';
 
 angular.module('angular-rpi', []).directive('rpi', [

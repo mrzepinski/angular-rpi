@@ -1,15 +1,17 @@
 'use strict';
 
 var gulp = require('gulp'),
-    uglify = require('gulp-uglify'),
+    bump = require('gulp-bump'),
     jshint = require('gulp-jshint'),
-    rename = require('gulp-rename'),
     concat = require('gulp-concat-util'),
+    uglify = require('gulp-uglify'),
+    rename = require('gulp-rename'),
     sass = require('gulp-sass'),
     cssmin = require('gulp-cssmin'),
     meta = require('./package.json');
 
-var paths = {
+var bumpFiles = ['./bower.json', './package.json'],
+    paths = {
         output: {
             js: 'dist/js',
             css: 'dist/css'
@@ -18,9 +20,18 @@ var paths = {
         js: 'src/js/' + meta.name + '.js'
     },
     description = {
-        top: '// ' + meta.title + ' - ' + meta.author.name + '\n' +
-            '// ' + meta.repository.url + ' - MIT License\n'
+        top: '/* ' + '\n'
+        + '   ' + meta.name + ' v' + meta.version + '\n'
+        + '   ' + meta.repository.url + '\n'
+        + '   MIT License - ' + meta.author.name + '\n'
+        + ' */\n\n'
     };
+
+gulp.task('bump', function () {
+    return gulp.src(bumpFiles)
+        .pipe(bump({type: 'minor'}))
+        .pipe(gulp.dest('./'));
+});
 
 gulp.task('lint', function(){
     return gulp.src(paths.js)
@@ -39,8 +50,8 @@ gulp.task('js', ['lint'], function(){
 
 gulp.task('scss', function () {
     return gulp.src(paths.scss)
-        .pipe(concat.header(description.top))
         .pipe(sass())
+        .pipe(concat.header(description.top))
         .pipe(gulp.dest(paths.output.css));
 });
 
