@@ -1,50 +1,58 @@
-'use strict';
+(function (angular, undefined) {
+    'use strict';
 
-angular.module('angular-rpi', []).directive('rpi', [
-    '$window', '$document',
-    function ($window, $document) {
-        return {
-            restrict: 'E',
-            link: function ($scope, $element) {
-                var w = angular.element($window),
-                    e = angular.element($element),
-                    body = $document.find('body').eq(0),
-                    progress = 0,
-                    progressContainer,
-                    progressBar,
-                    endPoint,
-                    createElements = function () {
-                        progressContainer = angular.element('<div></div>');
-                        progressBar = angular.element('<div></div>');
+    var rpi = angular.module('angular-rpi', []);
 
-                        progressContainer.attr('class', 'progress-container');
-                        progressBar.attr('class', 'progress-bar');
+    rpi.directive('rpi', [
+        '$window', '$document',
+        function ($window, $document) {
+            return {
+                restrict: 'E',
+                link: function ($scope, $element) {
+                    var windowEl = angular.element($window),
+                        body = $document.find('body').eq(0),
+                        progress = 0,
+                        progressContainer,
+                        progressBar,
+                        endPoint,
+                        createElements = function () {
+                            progressContainer = angular.element('<div></div>');
+                            progressBar = angular.element('<div></div>');
 
-                        progressContainer.append(progressBar);
-                        e.append(progressContainer);
-                    },
-                    getEndPoint = function () {
-                        return body[0].scrollHeight - window.innerHeight;
-                    },
-                    updateMetrics = function () {
-                        endPoint = getEndPoint();
-                        setProgress();
-                    },
-                    setProgress = function () {
-                        var y = window.scrollY || window.pageYOffset;
-                        progress = (y / endPoint) * 100;
-                        progressBar[0].style.width =  progress + '%';
-                    },
-                    init = function () {
-                        createElements();
-                        endPoint = getEndPoint();
-                        updateMetrics();
-                        w.on('scroll', setProgress);
-                        w.on('resize', updateMetrics.bind(null));
-                    };
+                            progressContainer.attr('class', 'progress-container');
+                            progressBar.attr('class', 'progress-bar');
 
-                init();
-            }
-        };
-    }
-]);
+                            progressContainer.append(progressBar);
+                            $element.append(progressContainer);
+                        },
+                        getEndPoint = function () {
+                            return body[0].scrollHeight - window.innerHeight;
+                        },
+                        updateMetrics = function () {
+                            endPoint = getEndPoint();
+                            setProgress();
+                        },
+                        setProgress = function () {
+                            var y = window.scrollY || window.pageYOffset;
+                            progress = (y / endPoint) * 100;
+                            progressBar[0].style.width =  [progress, '%'].join('');
+                        },
+                        init = function () {
+                            createElements();
+                            endPoint = getEndPoint();
+                            updateMetrics();
+                            windowEl.on('scroll', setProgress);
+                            windowEl.on('resize', updateMetrics);
+                        };
+
+                    init();
+
+                    $scope.$on('$destroy', function () {
+                        windowEl.off('scroll', setProgress);
+                        windowEl.off('resize', updateMetrics);
+                    });
+                }
+            };
+        }
+    ]);
+})(window.angular);
