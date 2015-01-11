@@ -1,5 +1,5 @@
 /* 
-   angular-rpi v0.1.2
+   angular-rpi v0.2.0
    git://github.com/mrzepinski/angular-rpi.git
    MIT License - Maciej Rzepinski
  */
