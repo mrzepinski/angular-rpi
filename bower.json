@@ -1,6 +1,6 @@
 {
   "name": "angular-rpi",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "author": "Maciej Rzepinski",
   "description": "AngularJS Reading Position Indicator",
   "homepage": "https://github.com/mrzepinski/angular-rpi",
@@ -9,16 +9,14 @@
     "url": "git://github.com/mrzepinski/angular-rpi.git"
   },
   "main": [
-    "./dist/css/angular-rpi.css",
     "./dist/css/angular-rpi.min.css",
-    "./dist/js/angular-rpi.js",
     "./dist/js/angular-rpi.min.js"
   ],
   "ignore": [
     ".jshintrc"
   ],
   "devDependencies": {
-    "angular": "~1.3.*"
+    "angular": "~1.3.11"
   },
   "licenses": [
     {
