@@ -5,6 +5,10 @@ AngularJS Reading Position Indicator
 
 Based on http://css-tricks.com/reading-position-indicator
 
+[DEMO](http://mrzepinski.github.io/angular-rpi/)
+
+![](http://i.imgur.com/l0CP6kJ.png)
+
 ### Usage:
 
 Load a module `['angular-rpi']`
