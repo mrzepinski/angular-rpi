@@ -1,5 +1,5 @@
 /* 
-   angular-rpi v1.0.0
+   angular-rpi v1.0.1
    git://github.com/mrzepinski/angular-rpi.git
    MIT License - Maciej Rzepinski
  */
@@ -32,14 +32,14 @@
                             $element.append(progressContainer);
                         },
                         getEndPoint = function () {
-                            return body[0].scrollHeight - window.innerHeight;
+                            return body[0].scrollHeight - windowEl[0].innerHeight;
                         },
                         updateMetrics = function () {
                             endPoint = getEndPoint();
                             setProgress();
                         },
                         setProgress = function () {
-                            var y = window.scrollY || window.pageYOffset;
+                            var y = windowEl[0].scrollY || windowEl[0].pageYOffset;
                             progress = (y / endPoint) * 100;
                             progressBar[0].style.width =  [progress, '%'].join('');
                         },
