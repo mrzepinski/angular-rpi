@@ -9,25 +9,23 @@ Based on http://css-tricks.com/reading-position-indicator
 
 ![](http://i.imgur.com/l0CP6kJ.png)
 
-### Usage:
+### AngularJS
 
-Load a module `['angular-rpi']`
-and simply add:
+This is an `AngularJS 2.x.x` implementaton.
+To use `AngularJS 1.x.x` you have to pick `1.x.x` version and look at branch [angular-1.x.x](https://github.com/mrzepinski/angular-rpi/tree/angular-1.x.x)
 
-````
-<!-- CSS -->
-<link rel="stylesheet" href="dist/css/angular-rpi.min.css" />
+To be honest - it is my first time with AngularJS 2.x.x branch ;)
 
-<!-- JS -->
-<script type="text/javascript" src="dist/js/angular-rpi.min.js"></script>
-```
+### Usage
 
-to your HTML, and then use it as a directive:
+Import directive:
+`import {AngularRpi} from 'angular-rpi';`
 
-
-```
-<rpi></rpi>
-```
+Create:
+`@View({
+    directives: [AngularRpi],
+    template: '<angular-rpi></angular-rpi>'
+})`
 
 ### Modify and build
 
@@ -35,10 +33,16 @@ You can change default styles for the progress bar by editing `angular-rpi.scss`
 or override it in your own styles.
 
 To build just type:
-`npm install` & `bower install` & `gulp`
+`npm install` & `gulp`
 
-It will create CSS from SCSS file, and minify JS & CSS files.
+It will create CSS from SCSS files, and minify JS & CSS files.
+
+Run `gulp dev` to start serving the application (it'll also start watching for any changes you make).
 
 ### Contribution
 
 Feel free to commit your code here :)
+
+### License
+
+MIT

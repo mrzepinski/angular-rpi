@@ -1,5 +1,4 @@
-.DS_Store
-node_modules
-demo/bower_components
+/dist
+/node_modules
 *.iml
 .idea
