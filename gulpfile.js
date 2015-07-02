@@ -8,9 +8,8 @@ var concat = require('gulp-concat'),
     sass = require('gulp-sass'),
     traceur = require('gulp-traceur'),
     uglify = require('gulp-uglify'),
-    webserver = require('gulp-webserver');
-
-var dist = 'dist',
+    webserver = require('gulp-webserver'),
+    dist = 'dist',
     src = 'src',
     paths = {
         dist_lib: dist + '/lib',
