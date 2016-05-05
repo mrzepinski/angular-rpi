@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>ng2-spin-kit</title>
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  <script src="node_modules/es6-shim/es6-shim.min.js"></script>
+  <script src="node_modules/systemjs/dist/system-polyfills.js"></script>
+  <script src="node_modules/angular2/es6/dev/src/testing/shims_for_IE.js"></script>
+
+  <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+  <script src="node_modules/typescript/lib/typescript.js"></script>
+  <script src="node_modules/systemjs/dist/system.src.js"></script>
+  <script src="node_modules/rxjs/bundles/Rx.js"></script>
+  <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+
+  <script>
+    System.config({
+      transpiler: 'typescript',
+      typescriptOptions: {
+        'tsconfig': true
+      },
+      map: {
+        app: './app'
+      },
+      packages: {
+        app: {
+          main: './main.ts',
+          defaultExtension: 'ts'
+        }
+      }
+    });
+    System.import('app').catch(console.error.bind(console));
+  </script>
+</head>
+
+<body>
+  <app>Loading..</app>
+</body>
+
+</html>

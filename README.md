@@ -12,30 +12,34 @@ Based on http://css-tricks.com/reading-position-indicator
 This is an `AngularJS 2.x.x` implementaton.
 To use `AngularJS 1.x.x` you have to pick `1.x.x` version and look at branch [angular-1.x.x](https://github.com/mrzepinski/angular-rpi/tree/angular-1.x.x)
 
-To be honest - it is my first time with AngularJS 2.x.x branch ;)
 
 ### Usage
 
-Import directive:
-`import {AngularRpi} from 'angular-rpi';`
+```javascript
+import {AngularRpi} from 'angular-rpi';
+``` 
 
-Create:
-`@View({
-    directives: [AngularRpi],
-    template: '<angular-rpi></angular-rpi>'
-})`
+```javascript
+@Component({
+  directives: [AngularRpi],
+  template: '<angular-rpi></angular-rpi>'
+})
+```
 
-### Modify and build
+### To run code locally:
+  ```javascript
+  npm start
+  ```
 
-You can change default styles for the progress bar by editing `angular-rpi.scss`,
-or override it in your own styles.
-
-To build just type:
-`npm install` & `gulp`
-
-It will create CSS from SCSS files, and minify JS & CSS files.
-
-Run `gulp dev` to start serving the application (it'll also start watching for any changes you make).
+### You can generate JavaScript code based on TypeScript by:
+  ```javascript
+  npm run tcs
+  ```
+  
+### To regenerate typings:
+  ```javascript
+  npm run typings
+  ```
 
 ### Contribution
 
